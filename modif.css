@@ -24,6 +24,9 @@ img{
     width: 95px !important;
     height: 95px !important;
 } */
+img{
+    border-radius:20% !important;
+}
 .links li a:hover{
     /* color: rgb(53,29,15); */
     color: rgb(144, 179, 255)
