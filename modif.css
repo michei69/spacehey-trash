@@ -1,0 +1,57 @@
+*{
+    --orange: #ffa052;
+}
+
+.top, nav .links, footer{
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+footer *{
+    color:white !important;
+}
+footer .links li::after{
+    color:white !important;
+}
+body{
+    background-image: url("https://wallpaperlion.com/wallpaper/full/8/0/1/1573431.jpg");
+    background-size:cover;
+    cursor: url("https://cdn.custom-cursor.com/db/6500/32/pusheen-and-autumn-leaf-cursor.png"), default !important;
+}
+img{
+    border-radius:20%;
+    width: 95px;
+    height: 95px;
+}
+.links li a:hover{
+    /* color: rgb(53,29,15); */
+    color: rgb(144, 179, 255)
+}
+.w-40 h1{
+    font-size:2.5em;
+}
+main{
+    background: rgba(255,255,255,0.8)
+}
+.contact, .url-info, .table-section{
+    border-color: var(--orange) !important;
+}
+.heading{
+    background: var(--orange) !important;
+}
+.heading h4{
+    color:white;
+}
+.section h4{
+    color: #db581c !important; 
+}
+.details-table td:first-child{
+    background: #ffaa65 !important;
+}
+.details-table td{
+    background: #ffbf8a !important;
+}
+.friends .inner p b::after{
+    content:url("https://cdn.discordapp.com/attachments/820595928838438912/901920054667534407/unknown.png");
+}
+#comments .inner p b::after{
+    content:"";
+}
