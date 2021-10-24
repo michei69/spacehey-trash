@@ -16,14 +16,14 @@ body{
     background-size:cover;
     cursor: url("https://cdn.custom-cursor.com/db/6500/32/pusheen-and-autumn-leaf-cursor.png"), default !important;
 }
-.online img{
+/* .online img{
     width: auto !important;
 }
 img{
     border-radius:20% !important;
     width: 95px !important;
     height: 95px !important;
-}
+} */
 .links li a:hover{
     /* color: rgb(53,29,15); */
     color: rgb(144, 179, 255)
