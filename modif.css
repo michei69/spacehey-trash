@@ -1,0 +1,222 @@
+html {
+    --dark-accent: #4A09A0;
+    --main-accent: #8E2DE2;
+    --top-bar-accent: #390890;
+}
+body{
+    background-image: url("https://github.com/michei69/spacehey-trash/raw/main/wp.jpg");
+}
+
+.container{
+    width: 90%;
+}
+main{
+    width: 70%;
+    margin: auto auto;
+    background-color: var(--dark-accent);
+    border-radius: 30px;
+    padding: 0 20px;
+}
+nav{
+    margin-bottom: 25px;
+}
+nav > .links{
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* gap: 10px; */ /* Would work on newer browsers, yet SpaceHey is made for the old era :) */
+}
+nav > .links li::after{
+    content: "" !important;
+}
+
+
+/* Work around gap for older browsers */
+nav > .links > li:nth-of-type(1){ 
+    margin-right: 10px;
+}
+nav > .links > li:not(:nth-of-type(1)){
+    margin-left: 10px;
+}
+/* end workaround */
+
+nav > * {
+    background-color: var(--top-bar-accent) !important;
+}
+nav > .top{
+    height: 50px;
+}
+nav > .top > .center{
+    margin-top: 5px;
+}
+nav > .top > .right {
+    margin-top: 15px; /* it'd be 10px by eye but 15px is correct */
+}
+nav > .links > li > a:hover{
+    color: #dddddd;
+    /* transition: all .25s; */ /* no transition cause i like it better without */
+}
+.heading { 
+    background-color: var(--main-accent) !important;
+}
+.profile .contact,
+.profile .url-info,
+.profile .table-section { 
+    border-color: var(--main-accent) !important;
+}
+
+.table-section > .inner > .details-table > tbody tr > td:nth-of-type(1){
+    background: none;
+    color: white;
+    width: 30%;
+}
+.table-section > .inner > .details-table > tbody tr > td:nth-of-type(1) > p::after{
+    content: ":"
+}
+.table-section > .inner > .details-table > tbody tr > td:nth-of-type(2){
+    background: none;
+    color: white;
+}
+.table-section > .inner > .details-table > tbody tr:nth-of-type(5),
+.table-section > .inner > .details-table > tbody tr:nth-of-type(6){
+    display: none;
+}
+
+div > span[itemprop=name] > h1 {
+    color: white;
+}
+div > span[itemprop=name] > h1::before{
+    content: url("https://github.com/michei69/spacehey-trash/raw/main/paw-solid.svg");
+    width: 20px;
+    height:20px;
+    filter: invert(100%);
+    display: inline-block;
+    transform: translate(0, 20%);
+    margin-right: 5px;
+}
+
+/* tooltip attempt */
+div > span[itemprop=name] {
+    width: fit-content;
+    display:inline-block;
+    margin-bottom: -10px;
+}
+div > span[itemprop=name] > h1::after{
+    content: "furry";
+    /* visibility: hidden; */
+    background: var(--top-bar-accent);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    transform:translate(-240%, -10%);
+    font-size: 16px;
+    opacity: 0%;
+    display: inline-block;
+    transition: .3s opacity;
+}
+div > span[itemprop=name] > h1:hover::after{
+    opacity: 100%;
+}
+/* this thing somehow works */
+/* lmk if better impl. :3 */
+
+div.general-about > div.profile-pic img {
+    border-radius: 15px;
+}
+div.general-about > div.details > p,
+div.mood p,
+div.url-info p,
+div.blog-preview h4,
+div.blog-preview p,
+div.blurbs > div h4,
+div.friends > div.heading h4{
+    color: white !important;
+}
+div.friends > div.inner p,
+div.blurbs > div *,
+div.table-section > div.inner > table > tbody > tr > td:nth-of-type(2){
+    color: #DDDDDD !important;
+}
+div.general-about > div.details > p:nth-of-type(1),
+div.mood > p:nth-of-type(1){
+    font-style: italic;
+}
+div.mood > p:nth-of-type(1) > b {
+    font-style:normal;
+}
+div.general-about > div.details > p.online > img{
+    display: none;
+}
+@keyframes blinky {
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+div.general-about > div.details > p.online {
+    color: #2EAE22 !important;
+    animation-name: blinky;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+div.general-about > div.details > p.online::before {
+    content: " ";
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #2EAE22;
+    border-radius: 100%;
+}
+div.inner a,
+div.mood > p > b > a,
+div.blog-preview p a,
+div.blog-preview h4 a,
+div.friends > div.heading a,
+footer * a,
+p.copyright {
+    color: #6CB4EE;
+}
+span.count{
+    color: var(--main-accent)
+}
+table.comments-table {
+    border: none !important;
+}
+table.comments-table > tbody > tr > td{
+    background-color: var(--main-accent) !important;
+    border: none;
+    outline: none;
+}
+table.comments-table > tbody > tr > td:nth-of-type(1){
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+table.comments-table > tbody > tr > td:nth-of-type(2){
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.container{
+    margin-bottom: 0;
+}
+footer{ 
+    margin-bottom: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: var(--top-bar-accent);
+}
+footer p,
+footer ul {
+    margin: 5px !important;
+    color: white;
+}
+footer ul li::after{
+    color: white !important;
+}
